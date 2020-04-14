@@ -1,0 +1,114 @@
+body {
+  margin: 0;
+  background-color: #202329;
+}
+
+::selection {
+  color: rgb(255, 152, 0);
+  background: rgb(32, 35, 41);
+}
+
+.wrapper {
+  padding-bottom: 30px;
+  font-family: "Robot", sans-serif;
+}
+
+.card-holder {
+  padding: 30px;
+  max-width: 1260px;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.character-card {
+  max-width: 300px;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  overflow: hidden;
+  background-color: #333333;
+}
+
+.character-card__header {
+  position: relative;
+}
+
+.character-card__title {
+  position: absolute;
+  bottom: 0;
+  padding: 10px;
+  width: 100%;
+  box-sizing: border-box;
+  opacity: 0.8;
+  background-color: #202329;
+}
+
+.character-card__img-holder img {
+  display: block;
+}
+
+.character-card__character-name {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-bottom: 10px;
+  color: #ffffff;
+}
+
+.character-card__character-description {
+  margin-top: 0;
+  margin-bottom: 0;
+  color: #BBBBBB;
+}
+
+.character-card__info {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding: 20px;
+  list-style: none;
+  font-size: 12px;
+}
+
+.character-card__info li {
+  padding-top: 12px;
+  padding-bottom: 6px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: nowrap;
+  color: #9e9e9e;
+}
+
+.character-card__info li:not(:last-child) {
+  border-bottom: 1px solid #444444;
+}
+
+.character-card__info li span {
+  line-height: 18px;
+}
+
+.character-card__info-value {
+  text-align: right;
+  width: 100%;
+  color: #ff9800;
+}
+
+.add-character-card {
+  width: 300px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.add-character-card__button {
+  height: fit-content;
+  padding: 10px;
+  font-size: 24px;
+  border-radius: 10px;
+}
+
+.preloader {
+  width: 25%;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
