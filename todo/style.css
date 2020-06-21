@@ -1,0 +1,126 @@
+body {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  font-family: "Roboto", sans-serif;
+}
+
+.loader {
+  position: absolute;
+  transform: translate(0, 50%);
+}
+
+.hide {
+  display: none;
+}
+
+.todo {
+  width: 600px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.input {
+  padding: 10px;
+  font-size: 20px;
+  border-radius: 5px;
+  border: 1px solid #bbb;
+}
+
+.button {
+  flex-shrink: 0;
+  border-radius: 5px;
+  border: 1px solid #bbb;
+  background-color: transparent;
+}
+
+.form {
+  display: flex;
+}
+
+.form :not(:first-child) {
+  margin-left: 5px;
+}
+
+.todo-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  width: 100%;
+}
+
+.login-form {
+  justify-content: start;
+}
+
+.todo-form {
+  justify-content: center;
+  width: 600px;
+}
+
+.todo-title {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 48px;
+}
+
+.todo-input {
+  width: 100%;
+}
+
+.tasks-list {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.task-item {
+  width: 600px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.task-item:not(:last-child) {
+  padding-bottom: 10px;
+}
+
+.task-text {
+  font-size: 20px;
+  word-break: break-all;
+}
+
+.task-text-edit {
+  width: 100%;
+  padding-top: 0;
+  padding-right: 10px;
+  padding-bottom: 6px;
+  font-family: "Roboto", sans-serif;
+  font-size: 20px;
+  border: none;
+  border-radius: 5px;
+}
+
+.task-done-text {
+  color: #777;
+  text-decoration: line-through;
+}
+
+.task-btn-holder {
+  display: flex;
+  flex-wrap: nowrap;
+  margin-left: 10px;
+}
+
+.task-btn-holder :not(:first-child) {
+  margin-left: 5px;
+}
+
+.task-btn {
+  height: 30px;
+  border-radius: 5px;
+  border: 1px solid #bbb;
+  background-color: transparent;
+}
