@@ -1,6 +1,8 @@
-body {
+.page {
   margin: 0;
   background-color: #202329;
+  display: flex;
+  justify-content: center;
 }
 
 ::selection {
@@ -10,7 +12,7 @@ body {
 
 .wrapper {
   padding-bottom: 30px;
-  font-family: "Robot", sans-serif;
+  font-family: 'Robot', sans-serif;
 }
 
 .card-holder {
@@ -57,7 +59,7 @@ body {
 .character-card__character-description {
   margin-top: 0;
   margin-bottom: 0;
-  color: #BBBBBB;
+  color: #bbbbbb;
 }
 
 .character-card__info {
