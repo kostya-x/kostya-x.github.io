@@ -1,0 +1,1 @@
+const burgerMenu=document.querySelector(".burger-menu");burgerMenu.addEventListener("click",()=>{console.log("click");document.querySelector(".navigation").classList.toggle("navigation--show")});
