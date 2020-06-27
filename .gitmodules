@@ -1,0 +1,3 @@
+[submodule "snake"]
+  path = "/"
+  url = https://github.com/kostya-x/snakejs
