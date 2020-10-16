@@ -1,15 +1,18 @@
 <template>
   <header class="header">
     <logo />
+    <navigation />
   </header>
 </template>
 
 <script>
 import Logo from "./Logo.vue";
+import Navigation from "./Navigation.vue";
 
 export default {
   components: {
-    Logo
+    Logo,
+    Navigation
   }
 };
 </script>
