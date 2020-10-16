@@ -3,6 +3,7 @@
     <logo />
     <navigation />
     <socials />
+    <burger-menu />
   </header>
 </template>
 
@@ -10,12 +11,14 @@
 import Logo from "./Logo.vue";
 import Navigation from "./Navigation.vue";
 import Socials from "./Socials.vue";
+import BurgerMenu from "./BurgerMenu.vue";
 
 export default {
   components: {
     Logo,
     Navigation,
-    Socials
+    Socials,
+    BurgerMenu
   }
 };
 </script>
