@@ -1,8 +1,19 @@
 <template>
   <header class="header">
-    <div class="logo"></div>
+    <logo />
   </header>
 </template>
+
+<script>
+import Logo from "./Logo.vue";
+
+export default {
+  components: {
+    Logo
+  }
+};
+</script>
+
 <style lang="scss">
 @import "../scss/_variables.scss";
 
