@@ -2,17 +2,20 @@
   <header class="header">
     <logo />
     <navigation />
+    <socials />
   </header>
 </template>
 
 <script>
 import Logo from "./Logo.vue";
 import Navigation from "./Navigation.vue";
+import Socials from "./Socials.vue";
 
 export default {
   components: {
     Logo,
-    Navigation
+    Navigation,
+    Socials
   }
 };
 </script>
