@@ -7,8 +7,15 @@
         </router-link>
         <img
           class="navigation__img"
-          src="../assets/icons/navigation/home.png"
           alt="home"
+          v-if="activePage === 'Home'"
+          :src="navigationIcons.active.home"
+        />
+        <img
+          class="navigation__img"
+          alt="home"
+          v-else
+          :src="navigationIcons.regular.home"
         />
       </li>
       <li class="navigation__item">
@@ -17,8 +24,15 @@
         </router-link>
         <img
           class="navigation__img"
-          src="../assets/icons/navigation/about-active.png"
           alt="about"
+          v-if="activePage === 'About'"
+          :src="navigationIcons.active.about"
+        />
+        <img
+          class="navigation__img"
+          alt="about"
+          v-else
+          :src="navigationIcons.regular.about"
         />
       </li>
       <li class="navigation__item">
@@ -27,8 +41,15 @@
         </router-link>
         <img
           class="navigation__img"
-          src="../assets/icons/navigation/skills.png"
           alt="skills"
+          v-if="activePage === 'Skills'"
+          :src="navigationIcons.active.skills"
+        />
+        <img
+          class="navigation__img"
+          alt="skills"
+          v-else
+          :src="navigationIcons.regular.skills"
         />
       </li>
       <li class="navigation__item">
@@ -37,8 +58,15 @@
         </router-link>
         <img
           class="navigation__img"
-          src="../assets/icons/navigation/projects.png"
           alt="projects"
+          v-if="activePage === 'Projects'"
+          :src="navigationIcons.active.projects"
+        />
+        <img
+          class="navigation__img"
+          alt="projects"
+          v-else
+          :src="navigationIcons.regular.projects"
         />
       </li>
       <li class="navigation__item">
@@ -47,13 +75,51 @@
         </router-link>
         <img
           class="navigation__img"
-          src="../assets/icons/navigation/contacts.png"
           alt="contacts"
+          v-if="activePage === 'Contacts'"
+          :src="navigationIcons.active.contacts"
+        />
+        <img
+          class="navigation__img"
+          alt="contacts"
+          v-else
+          :src="navigationIcons.regular.contacts"
         />
       </li>
     </ul>
   </nav>
 </template>
+
+<script>
+export default {
+  watch: {
+    $route() {
+      this.activePage = this.$route.name;
+    }
+  },
+  data() {
+    return {
+      activePage: this.$route.name,
+      navigationIcons: {
+        regular: {
+          home: "./icons/navigation/home.png",
+          about: "./icons/navigation/about.png",
+          skills: "./icons/navigation/skills.png",
+          projects: "./icons/navigation/projects.png",
+          contacts: "./icons/navigation/contacts.png"
+        },
+        active: {
+          home: "./icons/navigation/home-active.png",
+          about: "./icons/navigation/about-active.png",
+          skills: "./icons/navigation/skills-active.png",
+          projects: "./icons/navigation/projects-active.png",
+          contacts: "./icons/navigation/contacts-active.png"
+        }
+      }
+    };
+  }
+};
+</script>
 
 <style lang="scss">
 @import "../scss/_variables.scss";
