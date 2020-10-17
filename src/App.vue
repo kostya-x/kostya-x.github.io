@@ -1,17 +1,19 @@
 <template>
   <div id="app">
     <the-header />
-    <router-view />
+    <the-main />
   </div>
 </template>
 
 <script>
 import TheHeader from "./components/TheHeader.vue";
+import TheMain from "./components/TheMain.vue";
 
 export default {
   name: "App",
   components: {
-    TheHeader
+    TheHeader,
+    TheMain
   }
 };
 </script>
@@ -21,6 +23,12 @@ export default {
 
 body {
   margin: 0;
-  font-family: "Roboto", sans-serif;
+}
+
+#app {
+  height: 100vh;
+  min-width: 320px;
+  font-family: Roboto, sans-serif;
+  background-color: #1d1d1d;
 }
 </style>
