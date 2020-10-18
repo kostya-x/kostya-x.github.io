@@ -1,5 +1,51 @@
 <template>
   <div class="contacts">
-    <h1>This is an contacts page</h1>
+    <div class="main__conteiner">
+      <h1 class="main__title">
+        <span class="text--accent">Contacts</span>
+      </h1>
+      <ul class="main__list contacts__list">
+        <li class="main__item main__item--padding">
+          Telegram:
+          <a
+            class="main__link"
+            href="https://t.me/constantine_404"
+            target="_blank"
+          >
+            t.me/constantine_404
+          </a>
+        </li>
+        <li class="main__item main__item--padding">
+          LinkedIn:
+          <a
+            class="main__link"
+            href="https://linkedin.com/in/konstantin-mikhaylenko"
+            target="_blank"
+          >
+            linkedin.com/in/konstantin-mikhaylenko
+          </a>
+        </li>
+        <li class="main__item main__item--padding">
+          Facebook:
+          <a
+            class="main__link"
+            href="https://facebook.com/constantine.404"
+            target="_blank"
+          >
+            facebook.com/constantine.404
+          </a>
+        </li>
+        <li class="main__item main__item--padding">
+          @:
+          <a
+            class="main__link"
+            href="mailto:constantine-x@outlook.com"
+            target="_blank"
+          >
+            constantine-x@outlook.com
+          </a>
+        </li>
+      </ul>
+    </div>
   </div>
 </template>
