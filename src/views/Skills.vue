@@ -29,9 +29,7 @@
           >LinkedIn</a
         >
         profile or just
-        <router-link class="main__link" to="/contacts">
-          contact
-        </router-link>
+        <router-link class="main__link" to="/contacts">contact</router-link>
         me.
       </p>
     </div>
