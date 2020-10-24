@@ -33,7 +33,7 @@ export default {
   justify-content: space-between;
   height: 64px;
   background-color: $color-dark;
-  z-index: 1;
+  z-index: 2;
 }
 
 @media screen and (min-width: 1024px) {
