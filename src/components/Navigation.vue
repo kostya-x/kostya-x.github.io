@@ -53,18 +53,18 @@
         />
       </li>
       <li class="navigation__item">
-        <router-link class="navigation__link" to="/projects">
-          PROJECTS
+        <router-link class="navigation__link" to="/portfolio">
+          PORTFOLIO
         </router-link>
         <img
           class="navigation__img"
-          alt="projects"
-          v-if="activePage === 'Projects'"
+          alt="portfolio"
+          v-if="activePage === 'Portfolio'"
           :src="navigationIcons.active.projects"
         />
         <img
           class="navigation__img"
-          alt="projects"
+          alt="portfolio"
           v-else
           :src="navigationIcons.regular.projects"
         />
