@@ -66,10 +66,10 @@ export default {
     height: 64px;
     background-color: transparent;
     border: 0;
-    // background-image: url require(./icons/project/close-btn.png);
+    // background-image: url(./icons/project/close-btn.png);
     cursor: pointer;
     &:hover {
-      // background-image: url require(./icons/project/close-btn-active.png);
+      // background-image: url(./icons/project/close-btn-active.png);
     }
   }
   &__left {
@@ -82,10 +82,10 @@ export default {
     height: 64px;
     background-color: transparent;
     border: 0;
-    // background-image: url(./icons/project/left-btn.png);
+    background-image: url(./icons/project/left-btn.png);
     cursor: pointer;
     &:hover {
-      // background-image: url(./icons/project/left-btn-active.png);
+      background-image: url(./icons/project/left-btn-active.png);
     }
   }
   &__right {
