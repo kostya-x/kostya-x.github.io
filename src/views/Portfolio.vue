@@ -1,14 +1,14 @@
 <template>
   <div class="projects">
     <div class="main__conteiner">
-      <project-popup v-bind:isShowPopup="value" v-bind:element="element" />
+      <project-popup v-bind:isShowPopup="show" v-bind:object="object" />
       <div class="projects__container">
         <project
           v-for="element in projects"
           v-bind:key="projects.indexOf(element)"
           v-bind:element="element"
           v-bind:data-id="projects.indexOf(element)"
-          v-on:parentInfo="parentInfo"
+          v-on:checkPopup="checkPopup"
         />
       </div>
     </div>
@@ -27,7 +27,9 @@ export default {
   data() {
     return {
       element: "",
-      value: false,
+      object: {},
+      currentElement: "",
+      show: false,
       projects: [
         {
           name: "Snake",
@@ -54,9 +56,9 @@ export default {
     };
   },
   methods: {
-    parentInfo(value) {
-      this.value = value;
-      console.info("Parent " + this.value);
+    checkPopup(show, object) {
+      this.show = show;
+      this.object = object;
     }
   }
 };

@@ -1,37 +1,45 @@
 <template>
-  <transition name="modal" v-if="isShowPopup">
+  <!-- <transition name="modal" v-if="isShowPopup"> -->
     <div class="project-popup">
-      <button class="project-popup__close"></button>
+      <button
+        class="project-popup__close"
+        v-on:click="isShowPopup = false"
+      ></button>
       <button class="project-popup__left"></button>
       <button class="project-popup__right"></button>
       <div class="project-popup__slide">
         <img
           class="project-popup__img"
-          src="${projects[projectId].img[curretScreen]}"
-          alt="${projects[projectId].name}"
+          v-bind:src="object.img[slide]"
+          v-bind:alt="object.name"
         />
       </div>
       <div class="project-popup__footer">
         <div class="project-popup__footer-container">
           <a
             class="project-popup__source"
-            href="${projects[projectId].source}"
+            v-bind:href="object.source"
             target="_blank"
           ></a>
           <a
             class="project-popup__look"
-            href="${projects[projectId].look}"
+            v-bind:href="object.look"
             target="_blank"
           ></a>
         </div>
       </div>
     </div>
-  </transition>
+  <!-- </transition> -->
 </template>
 
 <script>
 export default {
-  props: ["isShowPopup", "element"]
+  props: ["object", "isShowPopup"],
+  data() {
+    return {
+      slide: 0
+    };
+  }
 };
 </script>
 
@@ -39,7 +47,6 @@ export default {
 @import "../scss/_variables.scss";
 
 .project-popup {
-  // display: none;
   z-index: 100000;
   position: fixed;
   top: 0;
@@ -59,10 +66,10 @@ export default {
     height: 64px;
     background-color: transparent;
     border: 0;
-    // background-image: url(./icons/project-icons/close-btn.png);
+    // background-image: url require(./icons/project/close-btn.png);
     cursor: pointer;
     &:hover {
-      // background-image: url(./icons/project-icons/close-btn-active.png);
+      // background-image: url require(./icons/project/close-btn-active.png);
     }
   }
   &__left {
@@ -75,10 +82,10 @@ export default {
     height: 64px;
     background-color: transparent;
     border: 0;
-    // background-image: url(./icons/project-icons/left-btn.png);
+    // background-image: url(./icons/project/left-btn.png);
     cursor: pointer;
     &:hover {
-      // background-image: url(./icons/project-icons/left-btn-active.png);
+      // background-image: url(./icons/project/left-btn-active.png);
     }
   }
   &__right {
@@ -91,10 +98,10 @@ export default {
     height: 64px;
     background-color: transparent;
     border: 0;
-    // background-image: url(./icons/project-icons/right-btn.png);
+    // background-image: url(./icons/project/right-btn.png);
     cursor: pointer;
     &:hover {
-      // background-image: url(./icons/project-icons/right-btn-active.png);
+      // background-image: url(./icons/project/right-btn-active.png);
     }
   }
   &__content {
@@ -104,6 +111,7 @@ export default {
     justify-content: center;
   }
   &__slide {
+    height: 100%;
     padding-bottom: 64px;
     display: flex;
     justify-content: center;
@@ -133,7 +141,7 @@ export default {
     display: block;
     // background-image: url(icons/project-icons/source.png);
     &:hover {
-      // background-image: url(./icons/project-icons/source-active.png);
+      // background-image: url(./icons/project/source-active.png);
     }
   }
   &__look {
@@ -141,9 +149,9 @@ export default {
     width: 64px;
     height: 64px;
     display: block;
-    // background-image: url(./icons/project-icons/look-at.png);
+    // background-image: url(./icons/project/look-at.png);
     &:hover {
-      // background-image: url(./icons/project-icons/look-at-active.png);
+      // background-image: url(./icons/project/look-at-active.png);
     }
   }
 }

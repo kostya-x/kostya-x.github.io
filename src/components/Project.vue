@@ -1,5 +1,5 @@
 <template>
-  <div class="project" v-on:click="childInfo">
+  <div class="project" v-on:click="showPopup">
     <h2 class="project__title">{{ element.name }}</h2>
     <img
       class="project__img"
@@ -11,11 +11,10 @@
 
 <script>
 export default {
-  props: ["element", "parentInfo"],
+  props: ["element", "checkPopup"],
   methods: {
-    childInfo() {
-      console.info("child");
-      this.$emit("parentInfo", true);
+    showPopup() {
+      this.$emit("checkPopup", true, this.element);
     }
   }
 };
@@ -36,7 +35,7 @@ export default {
   cursor: pointer;
   &:hover:after {
     z-index: 1;
-    content: url(../assets/project_icons/eye.png);
+    content: url require("./icons/project/eye.png");
     position: relative;
   }
   &:hover &__title {
