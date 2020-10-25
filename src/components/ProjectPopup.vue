@@ -1,5 +1,5 @@
 <template>
-  <!-- <transition name="modal" v-if="isShowPopup"> -->
+  <transition name="modal" v-if="isShowPopup">
     <div class="project-popup">
       <button
         class="project-popup__close"
@@ -29,7 +29,7 @@
         </div>
       </div>
     </div>
-  <!-- </transition> -->
+  </transition>
 </template>
 
 <script>
